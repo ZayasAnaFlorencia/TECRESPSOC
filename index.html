@@ -816,6 +816,31 @@ function openArchive() {
 }
 
 });
+
+
+document.addEventListener("click", function(e){
+
+  // Detecta cualquier botón que diga ARCHIVO
+  if (e.target.textContent.includes("ARCHIVO")) {
+
+    console.log("📜 Botón Archivo detectado");
+
+    const archive = document.getElementById("s-archive");
+
+    if(!archive){
+      console.error("No existe pantalla s-archive");
+      return;
+    }
+
+    document.querySelectorAll(".screen")
+      .forEach(s => s.classList.remove("active"));
+
+    archive.classList.add("active");
+  }
+
+});
+
+
 </script>
 
 </body>
