@@ -791,6 +791,24 @@ body::after{content:'';position:fixed;inset:0;
   var s=atob(b);
   var f=new Function(s);
   f();
+  setTimeout(() => {
+
+  if (typeof goToChar !== "undefined")
+    window.goToChar = goToChar;
+
+  if (typeof closeNPC !== "undefined")
+    window.closeNPC = closeNPC;
+
+  if (typeof nextSala !== "undefined")
+    window.nextSala = nextSala;
+
+  if (typeof retryTrivia !== "undefined")
+    window.retryTrivia = retryTrivia;
+
+  if (typeof loadSala !== "undefined")
+    window.loadSala = loadSala;
+
+}, 100);
 
 </script>
 </body>
